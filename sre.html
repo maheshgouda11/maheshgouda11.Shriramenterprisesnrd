@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="description" content="Shri Ram Enterprise – Your trusted destination for electrical & electronic products in India.">
+<title>Shri Ram Enterprise | Electrical & Electronics</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<script>
+
+function submitForm(){
+
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const category = document.getElementById('category').value;
+  const msg = document.getElementById('msg').value.trim();
+
+  // Validation
+  if(!fname || !email || !phone || !msg){
+
+    showToast('Please fill all required fields.');
+    return;
+  }
+
+  // Business Email
+  const businessEmail = 'sppatil71999@gmail.com';
+
+  // Email Subject
+  const subject = encodeURIComponent(
+    'New Quote Request - Shri Ram Enterprise'
+  );
+
+  // Email Body
+  const body = encodeURIComponent(
+
+`First Name: ${fname}
+
+Last Name: ${lname}
+
+Email: ${email}
+
+Phone / WhatsApp: ${phone}
+
+Product Category: ${category}
+
+Customer Requirement:
+${msg}`
+  );
+
+  // Open Mail App
+  window.location.href =
+    `mailto:${businessEmail}?subject=${subject}&body=${body}`;
+
+  // Success Message
+  showToast(
+    '✅ Thank you! We will contact you as soon as possible.'
+  );
+
+  // Reset Form
+  document.getElementById('fname').value = '';
+  document.getElementById('lname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('phone').value = '';
+  document.getElementById('category').value = '';
+  document.getElementById('msg').value = '';
+}
+
+</script>
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+
+<canvas id="bg-canvas"></canvas>
+<div class="grid-overlay"></div>
+-->
+<!-- Announcement -->
+<div class="announcement">
+  ⚡ SALE — Up to 40% OFF on Fans, Coolers & Home Wiring! ⚡
+</div>
+
+<!-- Nav -->
+<nav id="navbar">
+  <img src="logo.png" alt="Shri Ram Enterprises Logo" class="logo-img">
+
+  <!-- Logo Text -->
+  <div class="logo-text">
+    <span>Shri Ram Enterprises</span>
+    <span>Electrical & Electronics</span>
+  </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#categories">Products</a></li>
+    <li><a href="#featured">Featured</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#categories" onclick="toggleMenu()">Products</a>
+  <a href="#featured" onclick="toggleMenu()">Featured</a>
+  <a href="#brands" onclick="toggleMenu()">Brands</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Get Quote</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <span class="bolt-decor" style="right:-2%;top:10%;">⚡</span>
+  <span class="bolt-decor" style="left:55%;bottom:5%;font-size:100px;">🔌</span>
+
+  <div class="hero-content">
+    <div class="hero-badge">Trusted Since 2023</div>
+    <h1>
+      Power Your World<br>
+      with <span class="brand">Shri Ram</span><br>
+      <span class="alt">Enterprise</span>
+    </h1>
+    <p>Nargund's premier destination for electrical fittings, electronic appliances, wiring solutions, industrial components & smart home systems — all under one roof.</p>
+    <div class="hero-btns">
+      <a href="#featured" class="btn-primary"> Shop Now</a>
+      <a href="#contact" class="btn-outline">📞 Get Quote</a>
+    </div>
+    <div class="hero-stats">
+  <div class="stat">
+    <div class="stat-num" data-target="4000">0</div>
+    <div class="stat-label">Products</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-num" data-target="0" id="experienceYears">0</div>
+    <div class="stat-label">Years Experience</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-num" data-target="500">0</div>
+    <div class="stat-label">Happy Customers</div>
+  </div>
+</div>
+
+  <div class="hero-visual" aria-hidden="true">
+    <div class="circuit-ring">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer rings -->
+        <circle cx="200" cy="200" r="185" fill="none" stroke="rgba(0,212,255,0.08)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="155" fill="none" stroke="rgba(0,212,255,0.12)" stroke-width="1" stroke-dasharray="10 6"/>
+        <circle cx="200" cy="200" r="125" fill="none" stroke="rgba(255,107,0,0.12)" stroke-width="1"/>
+        <!-- Rotating elements -->
+        <g style="transform-origin:200px 200px; animation:spin-slow 20s linear infinite">
+          <circle cx="200" cy="45" r="6" fill="rgba(0,212,255,0.7)"/>
+          <circle cx="355" cy="200" r="6" fill="rgba(255,107,0,0.7)"/>
+          <circle cx="200" cy="355" r="6" fill="rgba(0,212,255,0.7)"/>
+          <circle cx="45" cy="200" r="6" fill="rgba(255,107,0,0.7)"/>
+        </g>
+        <g style="transform-origin:200px 200px; animation:spin-slow 30s linear infinite reverse">
+          <line x1="200" y1="75" x2="200" y2="115" stroke="rgba(0,212,255,0.2)" stroke-width="1.5"/>
+          <line x1="325" y1="200" x2="285" y2="200" stroke="rgba(255,107,0,0.2)" stroke-width="1.5"/>
+          <line x1="200" y1="325" x2="200" y2="285" stroke="rgba(0,212,255,0.2)" stroke-width="1.5"/>
+          <line x1="75" y1="200" x2="115" y2="200" stroke="rgba(255,107,0,0.2)" stroke-width="1.5"/>
+        </g>
+        <!-- Center bolt -->
+        <text x="200" y="220" text-anchor="middle" font-size="90" fill="url(#heroGrad)" opacity="0.9" style="animation:flicker 3s ease-in-out infinite">⚡</text>
+        <!-- Circuit lines -->
+        <path d="M 200 75 L 200 120 L 240 120 L 240 155" stroke="rgba(0,212,255,0.3)" stroke-width="1.5" fill="none"/>
+        <path d="M 325 200 L 280 200 L 280 160 L 248 160" stroke="rgba(255,107,0,0.25)" stroke-width="1.5" fill="none"/>
+        <path d="M 200 325 L 200 280 L 160 280 L 160 245" stroke="rgba(0,212,255,0.3)" stroke-width="1.5" fill="none"/>
+        <path d="M 75 200 L 120 200 L 120 240 L 152 240" stroke="rgba(255,107,0,0.25)" stroke-width="1.5" fill="none"/>
+        <!-- Corner dots -->
+        <circle cx="240" cy="155" r="3" fill="rgba(0,212,255,0.5)"/>
+        <circle cx="248" cy="160" r="3" fill="rgba(255,107,0,0.5)"/>
+        <circle cx="160" cy="245" r="3" fill="rgba(0,212,255,0.5)"/>
+        <circle cx="152" cy="240" r="3" fill="rgba(255,107,0,0.5)"/>
+        <defs>
+          <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00d4ff"/>
+            <stop offset="100%" style="stop-color:#ff6b00"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-item"><span class="dot"></span>Electrical Wiring</div>
+    <div class="marquee-item"><span class="dot"></span>LED Lighting</div>
+    <div class="marquee-item"><span class="dot"></span>MCB & Switchgear</div>
+    <div class="marquee-item"><span class="dot"></span>Smart Home</div>
+    <div class="marquee-item"><span class="dot"></span>Solar Solutions</div>
+    <div class="marquee-item"><span class="dot"></span>Cables & Conduits</div>
+    <div class="marquee-item"><span class="dot"></span>Electrical Wiring</div>
+    <div class="marquee-item"><span class="dot"></span>LED Lighting</div>
+    <div class="marquee-item"><span class="dot"></span>MCB & Switchgear</div>
+    <div class="marquee-item"><span class="dot"></span>Smart Home</div>
+    <div class="marquee-item"><span class="dot"></span>Solar Solutions</div>
+    <div class="marquee-item"><span class="dot"></span>Cables & Conduits</div>
+  </div>
+</div>
+
+<!-- Categories -->
+<section class="section-pad" id="categories">
+  <div class="section-header reveal">
+    <div class="section-tag">Browse by Category</div>
+    <h2 class="section-title">What We <span class="hl">Power</span></h2>
+    <p class="section-sub">From residential wiring to industrial automation — explore our extensive product range.</p>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card reveal" style="transition-delay:0.05s">
+      <div class="cat-icon" style="background:rgba(0,212,255,0.1);">💡</div>
+      <h3>Lighting Solutions</h3>
+      <p>LED bulbs, tube lights, panel lights, decorative & outdoor lighting for every space.</p>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card reveal" style="transition-delay:0.1s">
+      <div class="cat-icon" style="background:rgba(255,107,0,0.1);">🔌</div>
+      <h3>Wiring & Cables</h3>
+      <p>Finolex, Polycab, RR Kabel — PVC, XLPE, armoured & flexible cables for all loads.</p>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card reveal" style="transition-delay:0.15s">
+      <div class="cat-icon" style="background:rgba(245,197,24,0.1);">⚡</div>
+      <h3>MCB & Switchgear</h3>
+      <p>Distribution boards, MCBs, RCCBs, isolators from Havells, Legrand & Schneider.</p>
+      <div class="cat-arrow">→</div>
+    </div>
+   
+    <div class="cat-card reveal" style="transition-delay:0.25s">
+      <div class="cat-icon" style="background:rgba(255,107,0,0.1);">🔋</div>
+      <h3>UPS & Inverters</h3>
+      <p>Home UPS, solar inverters, batteries — Exide, Luminous.</p>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card reveal" style="transition-delay:0.3s">
+      <div class="cat-icon" style="background:rgba(245,197,24,0.1);">🏠</div>
+      <h3>Smart Home</h3>
+      <p>Wi-Fi switches, smart plugs, automation panels, voice-controlled systems.</p>
+      <div class="cat-arrow">→</div>
+    </div>
+    
+    <div class="cat-card reveal" style="transition-delay:0.4s">
+      <div class="cat-icon" style="background:rgba(255,107,0,0.1);">☀️</div>
+      <h3>Solar Products</h3>
+      <p>Solar accessories, mounting structures & more.</p>
+      <div class="cat-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<hr class="neon-divider">
+
+<!-- Featured Products -->
+<section class="section-pad" id="featured">
+
+  <div class="section-header reveal">
+    <div class="section-tag">Bestsellers</div>
+
+    <h2 class="section-title">
+      Featured <span class="hl-o">Products</span>
+    </h2>
+
+    <p class="section-sub">
+      Hand-picked top-sellers trusted by homes, offices & industries across Nargund.
+    </p>
+  </div>
+
+
+  <!-- PRODUCTS -->
+  <div class="products-grid" id="productsGrid">
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card reveal">
+      <span class="product-badge badge-hot">🔥 Hot</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        💡
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">LED Lighting</div>
+        <div class="product-name">
+          Havells 9W LED Batten
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card reveal">
+      <span class="product-badge badge-new">✨ New</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        🔌
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">Wiring</div>
+        <div class="product-name">
+          Polycab 1.5 sqmm FR Wire — 90 Mtr Coil
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+    <div class="product-card reveal">
+      <span class="product-badge badge-sale">💥 Sale</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        ⚡
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">Switchgear</div>
+        <div class="product-name">
+          Schneider 8-Way Distribution Board with MCBs
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+    <div class="product-card reveal">
+      <span class="product-badge badge-hot">🔥 Hot</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        🔋
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">Power Backup</div>
+        <div class="product-name">
+          Luminous Zelio+ Inverter & Battery
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- ADDITIONAL PRODUCTS -->
+    <!-- Hidden initially -->
+    <!-- ========================= -->
+
+    <div class="extra-product product-card reveal">
+
+      <span class="product-badge badge-new">✨ New</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        🌀
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">Fans & Coolers</div>
+        <div class="product-name">
+          Crompton High Speed Ceiling Fan
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="extra-product product-card reveal">
+
+      <span class="product-badge badge-sale">💥 Sale</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        ☀️
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">Solar Products</div>
+        <div class="product-name">
+          Solar Products & Accessories Kit
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="extra-product product-card reveal">
+
+      <span class="product-badge badge-hot">🔥 Hot</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        🏠
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">Smart Home</div>
+        <div class="product-name">
+          GM Wi-Fi Smart Switch Panel
+        </div>
+      </div>
+
+    </div>
+
+
+    
+
+
+    <div class="extra-product product-card reveal">
+
+      <span class="product-badge badge-sale">💥 Sale</span>
+
+      <div class="product-img">
+        <div class="glow-ring"></div>
+        🔧
+      </div>
+
+      <div class="product-info">
+        <div class="product-cat">Industrial</div>
+        <div class="product-name">
+          L&T Control Panel Components Kit
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- BROWSE MORE -->
+  <div class="browse-more-wrap reveal">
+
+    <button
+      type="button"
+      class="btn-primary"
+      id="browseMoreBtn"
+      aria-expanded="false"
+      aria-controls="productsGrid"
+      onclick="toggleProducts()"
+    >
+
+      <span id="browseMoreLabel">
+        Browse More Products
+      </span>
+
+      <span
+        class="bm-arrow"
+        id="bmArrow"
+      >
+        →
+      </span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<style>
+
+/* Extra products are hidden initially */
+.extra-product {
+  display: none;
+}
+
+
+/* When products are expanded */
+.products-grid.show-more .extra-product {
+  display: block;
+}
+
+
+/* Arrow animation */
+.browse-more-btn .bm-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+
+/* Rotate arrow when expanded */
+.products-grid.show-more + .browse-more-wrap .bm-arrow {
+  transform: rotate(90deg);
+}
+
+</style>
+
+
+
+<script>
+
+function toggleProducts() {
+
+  const grid = document.getElementById("productsGrid");
+  const button = document.getElementById("browseMoreBtn");
+  const label = document.getElementById("browseMoreLabel");
+
+  const isExpanded =
+    grid.classList.toggle("show-more");
+
+
+  // Update accessibility state
+  button.setAttribute(
+    "aria-expanded",
+    isExpanded
+  );
+
+
+  // Change button text
+  if (isExpanded) {
+
+    label.textContent = "Show Less Products";
+
+  } else {
+
+    label.textContent = "Browse More Products";
+
+  }
+
+}
+
+</script>
+<hr class="neon-divider">
+
+<!-- Why Us -->
+<section class="section-pad why-bg" id="why">
+  <div class="section-header reveal">
+    <div class="section-tag">Our Promise</div>
+    <h2 class="section-title">Why Choose <span class="hl">Shri Ram?</span></h2>
+    <p class="section-sub">
+  <span id="businessYears"></span> years of trust, quality, and dedicated service to Nargund and beyond.
+</p>
+
+<script>
+  const startYear = 2022;
+  const currentYear = new Date().getFullYear();
+  const businessYears = currentYear - startYear;
+
+  document.getElementById("businessYears").textContent = businessYears;
+  document.getElementById("experienceYears").textContent = businessYears;
+  document.getElementById("experienceYears").dataset.target = businessYears;
+</script>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal" style="transition-delay:0.05s">
+      <span class="why-icon">🏆</span>
+      <h3>ISI & ISO Certified</h3>
+      <p>Every product we stock carries genuine certifications. No counterfeits, no compromises — ever.</p>
+    </div>
+   
+    <div class="why-card reveal" style="transition-delay:0.15s">
+      <span class="why-icon">💰</span>
+      <h3>Best Price Guarantee</h3>
+      <p>We match or beat any competitor's price on identical products. Wholesale rates for bulk orders.</p>
+    </div>
+    <div class="why-card reveal" style="transition-delay:0.2s">
+      <span class="why-icon">🛠️</span>
+      <h3>Expert Installation</h3>
+      <p>Professional electricians available for home and commercial installation services at your doorstep.</p>
+    </div>
+    <div class="why-card reveal" style="transition-delay:0.25s">
+      <span class="why-icon">📞</span>
+      <h3>24/7 Support</h3>
+      <p>Technical helpline always open. Our experts guide you from selection to installation and beyond.</p>
+    </div>
+    <div class="why-card reveal" style="transition-delay:0.3s">
+      <span class="why-icon">♻️</span>
+      <h3>Energy Efficient</h3>
+      <p>solar products to help reduce your electricity bills.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="neon-divider">
+
+<!-- Brands -->
+<section class="section-pad" id="brands">
+  <div class="section-header reveal">
+    <div class="section-tag">Trusted Partners</div>
+    <h2 class="section-title">Brands We <span class="hl">Carry</span></h2>
+    <p class="section-sub">Authorised Whole sale and retaile dealer for India's most trusted electrical & electronics brands.</p>
+  </div>
+  <div class="brands-grid reveal">
+  
+    <div class="brand-pill">
+        <img src="logos/Havells-logo.jpg" alt="Havells" class="brand-logo">
+        <span>Havells</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos\polycab.jpg" alt="Polycab" class="brand-logo">
+        <span>Polycab</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos\KEI.png" alt="KEI" class="brand-logo">
+        <span>KEI</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos\Finolex-Logo.jpg" alt="FINOLEX" class="brand-logo">
+        <span>FINOLEX</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos\anchor.gif" alt="Anchor" class="brand-logo">
+        <span>Anchor</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos\philps.jfif" alt="Philips" class="brand-logo">
+        <span>Philips</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos\wipro.jfif" alt="Wipro" class="brand-logo">
+        <span>Wipro</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos\gm.png" alt="GM" class="brand-logo">
+        <span>GM</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/cro.jfif" alt="Crompton" class="brand-logo">
+        <span>Crompton</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/kolors.jpg" alt="KOLORS" class="brand-logo">
+        <span>KOLORS</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/vt.png" alt="VETO" class="brand-logo">
+        <span>VETO</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/rr.jfif" alt="RR" class="brand-logo">
+        <span>RR</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/nippo.png" alt="NIPPO" class="brand-logo">
+        <span>NIPPO</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/cello.png" alt="CELLO" class="brand-logo">
+        <span>CELLO</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/rally.jfif" alt="Rally" class="brand-logo">
+        <span>Rally</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/bajaj.png" alt="BAJAJ" class="brand-logo">
+        <span>BAJAJ</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/sceh.png" alt="SCHNEIDER" class="brand-logo">
+        <span>SCHNEIDER</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/lt.jfif" alt="L&T" class="brand-logo">
+        <span>L&amp;T</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/biocon.png" alt="BIOCON" class="brand-logo">
+        <span>BIOCON</span>
+    </div>
+    <div class="brand-pill">
+        <img src="logos/vebstar.jfif" alt="VEBSTAR" class="brand-logo">
+        <span>VEBSTAR</span>
+    </div>
+</div>
+
+</section>
+
+<hr class="neon-divider">
+
+<!-- Testimonials -->
+<section class="section-pad" id="testimonials">
+  <div class="section-header reveal">
+    <div class="section-tag">Happy Customers</div>
+    <h2 class="section-title">What People <span class="hl-o">Say</span></h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testi-card reveal" style="transition-delay:0.05s">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Got all my wiring material for a 3BHK at incredible wholesale rates. The team helped me calculate the exact requirements — saved me ₹2,000 compared to the market. Highly professional!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">RK</div>
+        <div>
+          <div class="testi-name">P B Jamdar</div>
+          <div class="testi-loc">Kalakeri, Nargund</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:0.1s">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">We sourced a complete range of electrical and electronic products for our office complex from Shri Ram Enterprises. The products were delivered on time, the quality was excellent, and the support was outstanding. Will definitely order again.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">PM</div>
+        <div>
+          <div class="testi-name">C S Patil</div>
+          <div class="testi-loc">Adyapak nagar, Nargund</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:0.15s">
+      <div class="testi-quote">"</div>
+<p class="testi-text">Excellent place for all electrical and electronic products. Got quality products at reasonable prices, and the staff was very helpful in choosing the right items. Genuine products, good service, and a trusted dealer!</p>      <div class="testi-author">
+        <div class="testi-avatar">SS</div>
+        <div>
+          <div class="testi-name">Praveen B</div>
+          <div class="testi-loc">Kasaba, Nargund</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="neon-divider">
+
+<!-- Contact -->
+<section class="section-pad" id="contact">
+  <div class="contact-wrap">
+
+    <!-- CONTACT INFORMATION -->
+    <div class="contact-info reveal">
+
+      <div class="section-tag">Get In Touch</div>
+
+      <h2>
+        Let's Power Your<br>
+        <span style="color:var(--neon-blue)">Project Together</span>
+      </h2>
+
+      <p>
+        Request a quote, ask about bulk pricing, or get expert advice.
+        Our team responds within 2 hours on business days.
+      </p>
+
+
+      <!-- STORE -->
+      <div class="contact-detail">
+
+        <div class="contact-icon">SRE</div>
+
+        <div class="contact-detail-text">
+          <strong>Our Store</strong>
+
+          Near Bus stand, Savadatti Road, Honkeri Complex<br>
+          Shri Ram Enterprises, Nargund - 582207.
+        </div>
+
+      </div>
+
+
+      <!-- PHONE / WHATSAPP -->
+      <div class="contact-detail">
+
+        <div class="contact-icon">📞</div>
+
+        <div class="contact-detail-text">
+
+          <strong>Call / WhatsApp</strong>
+
+          <a href="tel:+917619458535">
+            +91 7619458535
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- EMAIL -->
+      <div class="contact-detail">
+
+        <div class="contact-icon">✉️</div>
+
+        <div class="contact-detail-text">
+
+          <strong>Email Us</strong>
+
+          <a href="mailto:sppatil71999@gmail.com">
+            sppatil71999@gmail.com
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- STORE HOURS -->
+      <div class="contact-detail">
+
+        <div class="contact-icon">🕒</div>
+
+        <div class="contact-detail-text">
+
+          <strong>Store Hours</strong>
+
+          Mon–Sat: 10:00 AM – 9:30 PM
+          &nbsp;|&nbsp;
+          Sun: Holiday
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- REQUEST A QUOTE -->
+    <div class="contact-form reveal" style="transition-delay:0.15s">
+
+      <h3 style="
+        font-family:'Orbitron',sans-serif;
+        font-size:16px;
+        font-weight:700;
+        margin-bottom:10px;
+        color:var(--neon-blue);
+      ">
+        ⚡ Request a Quote
+      </h3>
+
+
+      <p style="margin-bottom:24px;opacity:0.75;">
+        Choose the easiest way to reach us.
+      </p>
+
+
+      <!-- SIMPLE OPTIONS -->
+      <div id="quoteOptions">
+
+
+        <!-- WHATSAPP -->
+        <a
+          href="https://wa.me/917619458535"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="submit-btn"
+          style="
+            display:block;
+            width:100%;
+            text-align:center;
+            text-decoration:none;
+            margin-bottom:12px;
+          "
+        >
+          💬 WhatsApp Us
+        </a>
+
+
+        <!-- CALL -->
+        <a
+          href="tel:+917619458535"
+          class="submit-btn"
+          style="
+            display:block;
+            width:100%;
+            text-align:center;
+            text-decoration:none;
+            margin-bottom:20px;
+          "
+        >
+          📞 Call Now
+        </a>
+
+
+        <!-- DIVIDER -->
+        <div style="
+          text-align:center;
+          margin:20px 0;
+          opacity:0.55;
+          font-size:13px;
+        ">
+          — or —
+        </div>
+
+
+        <!-- DETAILED FORM BUTTON -->
+        <button
+          type="button"
+          class="submit-btn"
+          onclick="showQuoteForm()"
+          style="width:100%;"
+        >
+          📋 Request Detailed Quote
+        </button>
+
+      </div>
+
+
+
+      <!-- DETAILED QUOTE FORM -->
+      <div id="detailedQuoteForm" style="display:none;">
+
+
+        <!-- FORM HEADER -->
+        <div style="
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          margin-bottom:20px;
+        ">
+
+          <h4 style="
+            font-family:'Orbitron',sans-serif;
+            color:var(--neon-blue);
+            margin:0;
+          ">
+            📋 Quote Details
+          </h4>
+
+          <button
+            type="button"
+            onclick="hideQuoteForm()"
+            style="
+              background:none;
+              border:none;
+              color:var(--neon-blue);
+              cursor:pointer;
+              font-size:13px;
+            "
+          >
+            ← Back
+          </button>
+
+        </div>
+
+
+        <!-- NAME -->
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label for="fname">
+              First Name
+            </label>
+
+            <input
+              type="text"
+              id="fname"
+              placeholder="Ramesh"
+              autocomplete="given-name"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="lname">
+              Last Name
+            </label>
+
+            <input
+              type="text"
+              id="lname"
+              placeholder="Patil"
+              autocomplete="family-name"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="form-group">
+
+          <label for="phone">
+            Phone / WhatsApp
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            placeholder="+917619458535"
+            autocomplete="tel"
+          >
+
+        </div>
+
+
+        <!-- EMAIL OPTIONAL -->
+        <div class="form-group">
+
+          <label for="email">
+            Email Address
+            <span style="opacity:0.55;">
+              (Optional)
+            </span>
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="ramesh@example.com"
+            autocomplete="email"
+          >
+
+        </div>
+
+
+        <!-- CATEGORY -->
+        <div class="form-group">
+
+          <label for="category">
+            Product Category
+          </label>
+
+          <select id="category">
+
+            <option value="">
+              Select a category…
+            </option>
+
+            <option>Lighting Solutions</option>
+            <option>Wiring & Cables</option>
+            <option>MCB & Switchgear</option>
+            <option>Security Systems</option>
+            <option>UPS & Inverters</option>
+            <option>Smart Home</option>
+            <option>Industrial</option>
+            <option>Solar Products</option>
+            <option>Other</option>
+
+          </select>
+
+        </div>
+
+
+        <!-- REQUIREMENT -->
+        <div class="form-group">
+
+          <label for="msg">
+            Message / Requirements
+          </label>
+
+          <textarea
+            id="msg"
+            placeholder="Describe your requirement, quantities needed, or any questions…"
+          ></textarea>
+
+        </div>
+
+
+        <!-- EMAIL FORM -->
+        <button
+          type="button"
+          class="submit-btn"
+          onclick="submitForm()"
+          style="width:100%;"
+        >
+          📧 Send Quote Request
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<script>
+
+function showQuoteForm() {
+
+  document.getElementById("quoteOptions").style.display = "none";
+
+  document.getElementById("detailedQuoteForm").style.display = "block";
+
+}
+
+
+function hideQuoteForm() {
+
+  document.getElementById("detailedQuoteForm").style.display = "none";
+
+  document.getElementById("quoteOptions").style.display = "block";
+
+}
+
+
+function submitForm() {
+
+  const fname =
+    document.getElementById("fname").value.trim();
+
+  const lname =
+    document.getElementById("lname").value.trim();
+
+  const email =
+    document.getElementById("email").value.trim();
+
+  const phone =
+    document.getElementById("phone").value.trim();
+
+  const category =
+    document.getElementById("category").value;
+
+  const message =
+    document.getElementById("msg").value.trim();
+
+
+  // Required fields
+  if (!fname || !phone || !category || !message) {
+
+    alert(
+      "Please fill in your First Name, Phone / WhatsApp, Product Category and Requirement."
+    );
+
+    return;
+
+  }
+
+
+  // Email is optional
+  const emailValue =
+    email || "Not provided";
+
+
+  const subject =
+    "New Quote Request - " + category;
+
+
+  const body =
+`NEW QUOTE REQUEST
+
+Customer Name:
+${fname} ${lname}
+
+Phone / WhatsApp:
+${phone}
+
+Email:
+${emailValue}
+
+Product Category:
+${category}
+
+Requirement:
+${message}`;
+
+
+  const mailtoURL =
+    "mailto:sppatil71999@gmail.com" +
+    "?subject=" +
+    encodeURIComponent(subject) +
+    "&body=" +
+    encodeURIComponent(body);
+
+
+  window.location.href = mailtoURL;
+
+}
+
+</script>
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo-wrap" style="margin-bottom:0">
+        <img src="logo.png" alt="Shri Ram Enterprises Logo" class="logo-img">
+        <div class="logo-text">
+          <span>Shri Ram Enterprise</span>
+          <span>Electrical & Electronics</span>
+        </div>
+      </a>
+      <p>Nargund's trusted electrical & electronics wholesaler and retailer since 2023. Quality products. Expert advice. Fair prices.</p>
+     <div class="social-links">
+  <a 
+  class="social-link" 
+  href="https://wa.me/917619458535" 
+  target="_blank" 
+  aria-label="WhatsApp"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+  <a 
+    class="social-link" 
+    href="https://www.instagram.com/shri.ram.enterprises.nargund/" 
+    target="_blank" 
+    aria-label="Instagram"
+  >
+   <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#categories">Lighting</a></li>
+        <li><a href="#categories">Cables & Wires</a></li>
+        <li><a href="#categories">Switchgear</a></li>
+        <li><a href="#categories">Fans and Coolers</a></li>
+        <li><a href="#categories">Solar Products</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#contact">Bulk Quotation</a></li>
+        <li><a href="#contact">Installation</a></li>
+        <li><a href="#contact">Contracts</a></li>
+        <li><a href="#contact">Project Consultation</a></li>
+        <li><a href="#contact">After-Sales Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#brands">Our Brands</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <span>Shri Ram Enterprise</span>. All Rights Reserved. GST: 29FGWPP9229M1ZZ</p>
+    <p>Nargund, Gadag, Karnataka, India</p>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast">✅ Added to cart!</div>
+
+<script>
+// ── Cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+
+// ── Navbar scroll
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50);});
+
+// ── Mobile menu
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+
+// ── Scroll reveal
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── Counter animation
+function animCounter(el,target,suffix=''){
+  let start=0; const dur=2000; const step=target/dur*16;
+  const t=setInterval(()=>{
+    start+=step; if(start>=target){start=target;clearInterval(t);}
+    el.textContent=Math.floor(start).toLocaleString('en-IN')+(suffix);
+  },16);
+}
+const counterObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){
+    const els=document.querySelectorAll('[data-target]');
+    els.forEach(el=>{
+      const t=parseInt(el.dataset.target);
+      animCounter(el,t,t>=1000?'+':'+');
+    });
+    counterObs.disconnect();
+  }});},{threshold:0.3});
+const heroStats=document.querySelector('.hero-stats');
+if(heroStats)counterObs.observe(heroStats);
+
+// ── Cart toast
+function addToCart(btn){
+  btn.textContent='✔ Added!';
+  btn.style.background='rgba(0,212,255,0.2)';
+  btn.style.color='#00d4ff';
+  showToast('⚡ Item added to cart!');
+  setTimeout(()=>{btn.textContent='⚡ Add to Cart';btn.style.background='';btn.style.color='';},2500);
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+// ── Form submit
+function submitForm(){
+  const f=document.getElementById('fname').value;
+  const e=document.getElementById('email').value;
+  const p=document.getElementById('phone').value;
+  if(!f||!e||!p){showToast('Please fill required fields.');return;}
+  showToast('✅ Message sent! We\'ll respond shortly.');
+  ['fname','lname','email','phone','category','msg'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+}
+
+// ── Canvas particles
+const canvas=document.getElementById('bg-canvas');
+const ctx=canvas.getContext('2d');
+let W,H,particles=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',()=>{resize();initParticles();});
+function initParticles(){
+  particles=[];
+  const count=Math.floor(W*H/20000);
+  for(let i=0;i<count;i++){
+    particles.push({
+      x:Math.random()*W, y:Math.random()*H,
+      vx:(Math.random()-0.5)*0.3, vy:(Math.random()-0.5)*0.3,
+      r:Math.random()*1.5+0.5,
+      c:Math.random()>0.5?'rgba(0,212,255,':'rgba(255,107,0,',
+      a:Math.random()*0.4+0.1
+    });
+  }
+}
+initParticles();
+let mouseX=-9999,mouseY=-9999;
+document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;});
+function drawParticles(){
+  ctx.clearRect(0,0,W,H);
+  particles.forEach(p=>{
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+    if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=p.c+p.a+')';
+    ctx.fill();
+    // connections
+    const dx=p.x-mouseX, dy=p.y-mouseY, dist=Math.sqrt(dx*dx+dy*dy);
+    if(dist<140){
+      ctx.beginPath();
+      ctx.moveTo(p.x,p.y);
+      ctx.lineTo(mouseX,mouseY);
+      ctx.strokeStyle='rgba(0,212,255,'+(0.15*(1-dist/140))+')';
+      ctx.lineWidth=0.6;
+      ctx.stroke();
+    }
+  }); 
+  particles.forEach((p,i)=>{
+    for(let j=i+1;j<particles.length;j++){
+      const q=particles[j];
+      const d=Math.hypot(p.x-q.x,p.y-q.y);
+      if(d<90){
+        ctx.beginPath();
+        ctx.moveTo(p.x,p.y);
+        ctx.lineTo(q.x,q.y);
+        ctx.strokeStyle='rgba(0,212,255,'+(0.06*(1-d/90))+')';
+        ctx.lineWidth=0.4;
+        ctx.stroke();
+      }
+    }
+  });
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+</script>
+
+</body>
+</html>
